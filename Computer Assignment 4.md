@@ -96,15 +96,15 @@ SRS <- 1000 #the number of repeats (not to be changed)
  # Use 1 for the second argument ("row/column index") to apply the function to
  #     each row; and use 2 for each column.
  avg <- apply(data.mat, 1, mean) #performs the averaging – do not change
- meanData <- mean(data.vec)
- sdData <- sd(data.vec)
+ meanData <- mean(avg)
+ sdData <- sd(avg)
  meanData
 [1] 19.87118
  sdData
 [1] 17.37138
  library(ggplot2)
- ggplot(data.frame(data.vec=data.vec), aes(x=data.vec)) + 
-   geom_histogram(aes(y=..density..),bins = sqrt(length(data.vec))+2,
+ ggplot(data.frame(avg=avg), aes(x=avg)) + 
+   geom_histogram(aes(y=..density..),bins = sqrt(length(avg))+2,
                   fill = "grey",col = "black") +
    geom_density(col = "red", lwd = 1) +
    stat_function(fun=dnorm, args=list(mean=(meanData), sd=sdData), col="blue", 
@@ -116,7 +116,7 @@ SRS <- 1000 #the number of repeats (not to be changed)
  #Normal Probability Plot (AKA: QQ Plot)
  # We need the sample mean and standard deviation to plot the line. 
  #    We will use the values already calculated.
- ggplot(data.frame(data.vec=data.vec), aes(sample=data.vec)) +
+ ggplot(data.frame(avg=avg), aes(sample=avg)) +
    stat_qq() +
    geom_abline(slope = sdData, intercept = meanData) +
    ggtitle(title)
