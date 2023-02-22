@@ -91,9 +91,7 @@ SRS <- 1000 #the number of repeats (not to be changed)
  meanData <- mean(avg)
  sdData <- sd(avg)
  meanData
-[1] 19.87118
  sdData
-[1] 17.37138
  library(ggplot2)
  ggplot(data.frame(avg=avg), aes(x=avg)) + 
    geom_histogram(aes(y=..density..),bins = sqrt(length(avg))+2,
