@@ -1,5 +1,5 @@
 # Computer Assignment 4
-Names: McKenzie Patterson
+McKenzie Patterson, Brandon Kinaan, Jack Krueckeberg
 
 ## Part A
 
