@@ -76,48 +76,51 @@ ggplot(data.frame(data.vec=data.vec), aes(sample=data.vec)) +
 
 ## Part B
 
-### > SRS <- 1000 #the number of repeats (not to be changed)
-> # n: the number of columns that are being averaged over. This changes for 
-> #    each run.
-> n <- 15
-> # I strongly suggest that you change the titles to include the distribution.
-> # The number of columns that are being averaged over will automatically
-> # be updated if you use the following code.
-> title <- paste("Uniform distribution: averaged over", n)
-> # calculate the average data – change the function in data.vec that 
-> #   corresponds to the distribution that you are using.
-> data.vec <- runif(SRS*n, min = -10, max = 50) #creates Uniform normal data
-> data.mat <- matrix(data.vec, nrow = SRS) #separates the data into rows 
-> #apply(your data table/matrix, row/column index, function):
-> # The apply() function can apply the function of your choice to each row or 
-> #     each column of your data table/matrix.  
-> # Use 1 for the second argument ("row/column index") to apply the function to
-> #     each row; and use 2 for each column.
-> avg <- apply(data.mat, 1, mean) #performs the averaging – do not change
-> meanData <- mean(data.vec)
-> sdData <- sd(data.vec)
-> meanData
+### Code 
+```R
+SRS <- 1000 #the number of repeats (not to be changed)
+ # n: the number of columns that are being averaged over. This changes for 
+ #    each run.
+ n <- 15
+ # I strongly suggest that you change the titles to include the distribution.
+ # The number of columns that are being averaged over will automatically
+ # be updated if you use the following code.
+ title <- paste("Uniform distribution: averaged over", n)
+ # calculate the average data – change the function in data.vec that 
+ #   corresponds to the distribution that you are using.
+ data.vec <- runif(SRS*n, min = -10, max = 50) #creates Uniform normal data
+ data.mat <- matrix(data.vec, nrow = SRS) #separates the data into rows 
+ #apply(your data table/matrix, row/column index, function):
+ # The apply() function can apply the function of your choice to each row or 
+ #     each column of your data table/matrix.  
+ # Use 1 for the second argument ("row/column index") to apply the function to
+ #     each row; and use 2 for each column.
+ avg <- apply(data.mat, 1, mean) #performs the averaging – do not change
+ meanData <- mean(data.vec)
+ sdData <- sd(data.vec)
+ meanData
 [1] 19.87118
-> sdData
+ sdData
 [1] 17.37138
-> library(ggplot2)
-> ggplot(data.frame(data.vec=data.vec), aes(x=data.vec)) + 
-+   geom_histogram(aes(y=..density..),bins = sqrt(length(data.vec))+2,
-+                  fill = "grey",col = "black") +
-+   geom_density(col = "red", lwd = 1) +
-+   stat_function(fun=dnorm, args=list(mean=(meanData), sd=sdData), col="blue", 
-+                 lwd = 1) +
-+   ggtitle(title) +
-+   xlab("Data") +
-+   ylab("Proportion") # Need to use proportion with density curves
-> #
-> #Normal Probability Plot (AKA: QQ Plot)
-> # We need the sample mean and standard deviation to plot the line. 
-> #    We will use the values already calculated.
-> ggplot(data.frame(data.vec=data.vec), aes(sample=data.vec)) +
-+   stat_qq() +
-+   geom_abline(slope = sdData, intercept = meanData) +
-+   ggtitle(title)
+ library(ggplot2)
+ ggplot(data.frame(data.vec=data.vec), aes(x=data.vec)) + 
+   geom_histogram(aes(y=..density..),bins = sqrt(length(data.vec))+2,
+                  fill = "grey",col = "black") +
+   geom_density(col = "red", lwd = 1) +
+   stat_function(fun=dnorm, args=list(mean=(meanData), sd=sdData), col="blue", 
+                 lwd = 1) +
+   ggtitle(title) +
+   xlab("Data") +
+   ylab("Proportion") # Need to use proportion with density curves
+ #
+ #Normal Probability Plot (AKA: QQ Plot)
+ # We need the sample mean and standard deviation to plot the line. 
+ #    We will use the values already calculated.
+ ggplot(data.frame(data.vec=data.vec), aes(sample=data.vec)) +
+   stat_qq() +
+   geom_abline(slope = sdData, intercept = meanData) +
+   ggtitle(title)
+```
 
 ### Histogram and Normal Probability Plots
 
