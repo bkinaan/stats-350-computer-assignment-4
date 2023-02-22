@@ -165,7 +165,7 @@ data.mat <- matrix(data.vec, nrow = SRS)
 
 avg <- apply(data.mat, 1, mean)
 
-RandomData <- data.vec
+RandomData <- avg
 title <- "Weibull Distribution"
 
 library(ggplot2)
