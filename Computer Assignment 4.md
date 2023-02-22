@@ -201,6 +201,13 @@ ggplot(data.frame(RandomData = RandomData), aes(sample = RandomData)) + stat_qq(
 ![[Weibull_40_Plot.png|300]]]
 
 ### Summary
+|n|Experimental Mean|Theoretical Mean|Experimental Standard Deviation|Theoretical Standard Deviation|
+|---|---|---|---|---|
+|1|19.69039|19.69039|0.6583584|0.6583584|
+|5|19.72333|19.72333|0.6336057|0.6336057 /sqrt(5) = 0.2833571|
+|10|19.72588|19.72588|0.6234095|0.19171394|
+|20|19.72602|19.72602|0.6192171|0.138461|
+|40|19.72518|19.72518|0.6223502|0.0984022|
 
 ## Part D
 
