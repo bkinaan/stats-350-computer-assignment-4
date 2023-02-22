@@ -124,6 +124,22 @@ SRS <- 1000 #the number of repeats (not to be changed)
 
 ### Histogram and Normal Probability Plots
 
+![[hist1.png|300]]]
+
+![[dot1.png|300]]]
+
+![[hist3.png|300]]]
+
+![[dot3.png|300]]]
+
+![[hist5.png|300]]]
+
+![[dot5.png|300]]]
+
+![[hist15.png|300]]]
+
+![[dot15.png|300]]]
+
 ### Summary
 
 ## Part C
