@@ -50,24 +50,16 @@ ggplot(data.frame(data.vec=data.vec), aes(sample=data.vec)) +
 ```
 
 ### Histogram and Normal Probability Plots
-![[normal, 1, hist.png|300]]
 
-![[normal, 1, qq.png|300]]]
-
-![[normal, 3, hist.png|300]]]
-
-![[normal, 3, qq.png|300]]]
-
-![[normal, 7, hsit.png|300]]]
-
-![[normal, 7, qq.png|300]]]
-
-![[normal, 15, hist.png|300]]]
-
-![[normal, 15, qq.png|300]]]
+|Histogram|Normal Probability plot|
+|---|---|
+|![[normal, 1, hist.png]]|![[normal, 1, qq.png]]|
+|![[normal, 3, hist.png]]|![[normal, 3, qq.png]]|
+|![[normal, 7, hsit.png]]|![[normal, 7, qq.png]]|
+|![[normal, 15, hist.png]]|![[normal, 15, qq.png]]|
 
 ### Summary
-|n|Experimental Mean|Theoretical Mean|Experimental Standard Deviation|Theoretical Standard Deviation|
+|n|Experimental Mean**|**Theoretical Mean**|**Experimental Standard Deviation**|**Theoretical Standard Deviation**|
 |---|---|---|---|---|
 |1|0.03039396|0.03039396|1.02001|1.02001|
 |3|0.03518086|0.03518086|1.011688|1.011688 / sqrt(3) = 0.584098|
@@ -132,9 +124,9 @@ SRS <- 1000 #the number of repeats (not to be changed)
 
 ![[dot3.png|300]]]
 
-![[hist5.png|300]]]
+![[hist7.png|300]]]
 
-![[dot5.png|300]]]
+![[dot7.png|300]]]
 
 ![[hist15.png|300]]]
 
@@ -142,7 +134,7 @@ SRS <- 1000 #the number of repeats (not to be changed)
 
 ### Summary
 
-|n|Experimental Mean|Theoretical Mean|Experimental Standard Deviation|Theoretical Standard Deviation|
+|**n**|**Experimental Mean**|**Theoretical Mean**|**Experimental Standard Deviation**|**Theoretical Standard Deviation**|
 |---|---|---|---|---|
 |1|19.89295|19.89295|17.20203|17.20203|
 |3|19.51321|19.51321|17.27172|17.27172/sqrt(3) = 9.971832191|
@@ -201,7 +193,7 @@ ggplot(data.frame(RandomData = RandomData), aes(sample = RandomData)) + stat_qq(
 ![[Weibull_40_Plot.png|300]]]
 
 ### Summary
-|n|Experimental Mean|Theoretical Mean|Experimental Standard Deviation|Theoretical Standard Deviation|
+|**n**|**Experimental Mean**|**Theoretical Mean**|**Experimental Standard Deviation**|**Theoretical Standard Deviation**|
 |---|---|---|---|---|
 |1|19.69039|19.69039|0.6583584|0.6583584|
 |5|19.72333|19.72333|0.6336057|0.6336057 /sqrt(5) = 0.2833571|
@@ -224,3 +216,23 @@ ggplot(data.frame(RandomData = RandomData), aes(sample = RandomData)) + stat_qq(
 ### Histogram and Normal Probability Plots
 
 ### Summary
+
+## Part F
+
+For every distribution and value of n, Equations 1 are valid. 
+
+As n increases, the distributions get closer to a normal distribution.
+
+  
+
+|Distribution|Large Value|
+|---|---|
+|Normal|3|
+|Uniform|7|
+|Weibull|5|
+|Poissson|-|
+|Chi-Squared|-|
+
+  
+
+As a rule of thumb, with an n value of 20 or larger any distribution will become approximately normal.
