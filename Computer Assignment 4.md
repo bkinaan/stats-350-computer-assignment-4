@@ -52,19 +52,19 @@ ggplot(data.frame(data.vec=data.vec), aes(sample=data.vec)) +
 ### Histogram and Normal Probability Plots
 ![[normal, 1, hist.png|300]]
 
-![[normal, 1, qq.png|300]]]
+![[normal, 1, qq.png|300]]
 
-![[normal, 3, hist.png|300]]]
+![[normal, 3, hist.png|300]]
 
-![[normal, 3, qq.png|300]]]
+![[normal, 3, qq.png|300]]
 
-![[normal, 7, hsit.png|300]]]
+![[normal, 7, hsit.png|300]]
 
-![[normal, 7, qq.png|300]]]
+![[normal, 7, qq.png|300]]
 
-![[normal, 15, hist.png|300]]]
+![[normal, 15, hist.png|300]]
 
-![[normal, 15, qq.png|300]]]
+![[normal, 15, qq.png|300]]
 
 ### Summary
 |n|Experimental Mean|Theoretical Mean|Experimental Standard Deviation|Theoretical Standard Deviation|
@@ -124,21 +124,21 @@ SRS <- 1000 #the number of repeats (not to be changed)
 
 ### Histogram and Normal Probability Plots
 
-![[hist1.png|300]]]
+![[hist1.png|300]]
 
-![[dot1.png|300]]]
+![[dot1.png|300]]
 
-![[hist3.png|300]]]
+![[hist3.png|300]]
 
-![[dot3.png|300]]]
+![[dot3.png|300]]
 
-![[hist5.png|300]]]
+![[hist5.png|300]]
 
-![[dot5.png|300]]]
+![[dot5.png|300]]
 
-![[hist15.png|300]]]
+![[hist15.png|300]]
 
-![[dot15.png|300]]]
+![[dot15.png|300]]
 
 ### Summary
 
