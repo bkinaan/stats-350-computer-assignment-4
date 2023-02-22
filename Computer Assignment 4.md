@@ -129,6 +129,32 @@ SRS <- 1000 #the number of repeats (not to be changed)
 ## Part C
 
 ### Code
+```R
+SRS <- 1000
+n <- 1
+
+#Weibull
+
+title <- paste("Weibull Distribution: avergaged over", n)
+
+data.vec <- rweibull(SRS*n, shape = 40, scale = 20)
+data.mat <- matrix(data.vec, nrow = SRS)
+
+avg <- apply(data.mat, 1, mean)
+
+RandomData <- data.vec
+title <- "Weibull Distribution"
+
+library(ggplot2)
+xbar <- mean(RandomData)
+s <- sd(RandomData)
+
+# histogram
+ggplot(data.frame(RandomData = RandomData), aes(x = RandomData)) + geom_histogram(aes(y = ..density..), bins = 30, fill = "grey", col = "black") + geom_density(col = "red", lwd = 1) + stat_function(fun = dnorm, args = list(mean = xbar, sd = s), col = "blue", lwd = 1) +ggtitle(title) + xlab("Data") + ylab("Proportion")
+
+# QQ Plot
+ggplot(data.frame(RandomData = RandomData), aes(sample = RandomData)) + stat_qq() + geom_abline(slope = s, intercept = xbar) + ggtitle(title)
+```
 
 ### Histogram and Normal Probability Plots
 
