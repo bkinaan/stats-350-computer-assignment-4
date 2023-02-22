@@ -180,6 +180,25 @@ ggplot(data.frame(RandomData = RandomData), aes(sample = RandomData)) + stat_qq(
 ```
 
 ### Histogram and Normal Probability Plots
+![[Weibull_1_Hist.png|300]]]
+
+![[Weibull_1_Plot.png|300]]]
+
+![[Weibull_5_Hist.png|300]]]
+
+![[Weibull_5_Plot.png|300]]]
+
+![[Weibull_10_Hist.png|300]]]
+
+![[Weibull_10_Plot.png|300]]]
+
+![[Weibull_20_Hist.png|300]]]
+
+![[Weibull_20_Plot.png|300]]]
+
+![[Weibull_40_Hist.png|300]]]
+
+![[Weibull_40_Plot.png|300]]]
 
 ### Summary
 
