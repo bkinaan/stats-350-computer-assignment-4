@@ -1,5 +1,5 @@
 # Computer Assignment 4
-Names:
+Names: McKenzie Patterson
 
 ## Part A
 
